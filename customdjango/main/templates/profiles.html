@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<title>{% block title %}Rental List Pages{% endblock %}</title>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Image</th>
+      <th>Create At</th>
+
+      
+    </tr>
+
+    <tr>
+
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      
+      <td><img src="{{ user.images.url }}" alt="Girl in a jacket" width="500" height="600"> </td>
+      <td>{{ user.create_at }}</td>
+  
+    </tr>
+
+  </table>
+
+
+
+{% endblock %}

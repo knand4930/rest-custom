@@ -1,0 +1,11 @@
+CREATE TABLE Employees (
+    first_name VARCHAR(50),
+    surname varchar(50)
+    salary Integer(10),
+    department_name varchar(50)
+);
+
+SELECT MAX(salary) AS MaxSalary
+FROM Employees;
+
+SELECT department_name, MAX(salary) FROM Employees GROUP BY department_name;
